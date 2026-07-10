@@ -46,7 +46,7 @@ export default function HomePage() {
                 Explorar conteúdo
               </Link>
               <a
-                href="https://cursos.masterproject.com.br"
+                href="https://cursos-online.masterproject.com.br"
                 className="rounded-full border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-brand-400 hover:text-brand-600"
               >
                 Ver cursos
@@ -123,7 +123,7 @@ export default function HomePage() {
             prática como aplicar o que você aprendeu aqui.
           </p>
           <a
-            href="https://cursos.masterproject.com.br"
+            href="https://cursos-online.masterproject.com.br"
             className="mt-6 inline-block rounded-full bg-accent-500 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-accent-300"
           >
             Assistir aulas gratuitas
