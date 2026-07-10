@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::selection {
+    background-color: theme("colors.accent.300");
+    color: theme("colors.ink");
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid theme("colors.brand.500");
+    outline-offset: 2px;
+  }
+}
+
+/* Motivo de assinatura: linhas de conexão estilo diagrama de processo.
+   Usado no hero e como divisor entre seções. Respeita prefers-reduced-motion. */
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.flow-line path {
+  animation: flow-dash 2.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-line path {
+    animation: none;
+  }
+}
