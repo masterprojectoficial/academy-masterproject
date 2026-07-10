@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
-import type { Article, Categoria, Frontmatter } from "./content-schema";
+import type { Article, Categoria, ContentType, Frontmatter } from "./content-schema";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
@@ -41,6 +41,18 @@ export function getAllArticles(): Article[] {
   return categorias.flatMap((categoria) =>
     getSlugsByCategoria(categoria).map((slug) => getArticle(categoria, slug))
   );
+}
+
+export function getArticlesByTipo(
+  tipo: ContentType,
+  categoria?: Categoria
+): Article[] {
+  return getAllArticles()
+    .filter((a) => a.tipo === tipo && (!categoria || a.categoria === categoria))
+    .sort(
+      (a, b) =>
+        new Date(b.dataPublicacao).getTime() - new Date(a.dataPublicacao).getTime()
+    );
 }
 
 export function getArticlesRelacionados(article: Article, limit = 3): Article[] {
