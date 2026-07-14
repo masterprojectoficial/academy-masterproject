@@ -35,7 +35,7 @@ export default function SiteHeader() {
         </nav>
 
         <a
-          href="https://cursos.masterproject.com.br"
+          href="https://cursos-online.masterproject.com.br"
           className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-brand-600"
         >
           Ver cursos

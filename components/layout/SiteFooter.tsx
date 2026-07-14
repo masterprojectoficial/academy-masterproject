@@ -70,8 +70,8 @@ export default function SiteFooter() {
             <a href="https://masterproject.com.br" className="hover:text-brand-600">
               masterproject.com.br
             </a>
-            <a href="https://cursos.masterproject.com.br" className="hover:text-brand-600">
-              cursos.masterproject.com.br
+            <a href="https://cursos-online.masterproject.com.br" className="hover:text-brand-600">
+              cursos-online.masterproject.com.br
             </a>
           </p>
         </div>

@@ -45,7 +45,7 @@ export interface ConteudoRelacionado {
 export interface CTACurso {
   cursoNome: string;
   cursoSlug: string;
-  urlCurso: string; // link para cursos.masterproject.com.br
+  urlCurso: string; // link para cursos-online.masterproject.com.br
   textoBotao?: string; // default: "Conheça o curso completo"
 }
 
