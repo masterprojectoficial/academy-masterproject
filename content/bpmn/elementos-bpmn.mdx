@@ -1,0 +1,93 @@
+---
+titulo: "Elementos do BPMN: Guia Completo dos Símbolos e Notações"
+metaDescricao: "Conheça os principais elementos do BPMN — eventos, tarefas, gateways e fluxos — com exemplos visuais e explicação de quando usar cada um."
+slug: "elementos-bpmn"
+palavraChavePrincipal: "elementos bpmn"
+palavrasChaveSecundarias:
+  - "símbolos bpmn"
+  - "notação bpmn explicada"
+tipo: "artigo"
+categoria: "bpmn"
+tags: ["bpmn", "modelagem de processos", "notação"]
+dataPublicacao: "2026-07-14"
+autor: "Equipe Master Project"
+introducao: "O BPMN tem um conjunto relativamente pequeno de elementos gráficos, mas cada um tem um significado preciso. Entender essa 'gramática visual' é o que permite ler qualquer diagrama BPMN, mesmo um feito por outra empresa."
+faq:
+  - pergunta: "Quantos elementos do BPMN eu preciso saber para começar?"
+    resposta: "Com cerca de 6 elementos — evento de início, evento de fim, tarefa, gateway exclusivo, gateway paralelo e fluxo de sequência — você já consegue modelar a maioria dos processos do dia a dia."
+  - pergunta: "Qual a diferença entre gateway exclusivo e gateway paralelo?"
+    resposta: "O gateway exclusivo representa uma decisão onde só um caminho é seguido (ou/ou). O gateway paralelo indica que múltiplos caminhos acontecem ao mesmo tempo (e/e)."
+  - pergunta: "Existe um número máximo de elementos que um diagrama BPMN pode ter?"
+    resposta: "Não há limite técnico, mas diagramas muito grandes prejudicam a leitura. Quando um processo fica complexo demais, o recomendado é dividir em subprocessos."
+conteudosRelacionados:
+  - titulo: "O que é BPMN? Entenda a Notação de Modelagem de Processos"
+    slug: "o-que-e-bpmn"
+    tipo: "artigo"
+  - titulo: "O que é o Bizagi Modeler e para que serve"
+    slug: "o-que-e-bizagi-modeler"
+    tipo: "artigo"
+ctaCurso:
+  cursoNome: "Formação Completa em BPMN"
+  cursoSlug: "formacao-bpmn"
+  urlCurso: "https://cursos-online.masterproject.com.br/bpmn"
+aulasGratuitasUrl: "https://cursos-online.masterproject.com.br/bpmn/aulas-gratis"
+certificadoDisponivel: true
+---
+
+## Eventos: o que marca o início, o meio e o fim
+
+Eventos são representados por **círculos** e indicam algo que "acontece"
+durante o processo:
+
+- **Evento de início** (círculo com borda fina): marca onde o processo
+  começa — por exemplo, "pedido recebido"
+- **Evento intermediário** (círculo de borda dupla fina): algo que
+  acontece no meio do processo, como o recebimento de uma mensagem
+- **Evento de fim** (círculo com borda grossa): marca onde o processo
+  termina
+
+## Tarefas: o que é feito de fato
+
+Tarefas são representadas por **retângulos com cantos arredondados** e
+descrevem uma atividade concreta, sempre começando com um verbo: "Analisar
+solicitação", "Aprovar orçamento", "Enviar notificação".
+
+Existem variações de tarefa (manual, de sistema, de usuário), mas para
+quem está começando, o essencial é entender que cada retângulo representa
+um passo específico do trabalho.
+
+## Gateways: onde o processo toma decisões
+
+Gateways são representados por **losangos** e controlam como o fluxo se
+divide ou se junta:
+
+- **Gateway exclusivo (X)**: representa uma decisão "ou isso, ou aquilo" —
+  por exemplo, "pedido aprovado?" leva a caminhos diferentes conforme a
+  resposta
+- **Gateway paralelo (+)**: indica que múltiplas coisas acontecem ao mesmo
+  tempo, sem depender uma da outra
+- **Gateway inclusivo (O)**: permite que um ou mais caminhos sejam
+  seguidos, dependendo das condições
+
+## Fluxos de sequência: a ordem das coisas
+
+As **setas** que conectam os elementos indicam a ordem em que o processo
+acontece. É importante que o fluxo tenha sempre um caminho claro do início
+ao fim — diagramas com setas soltas ou sem destino são um erro comum de
+modelagem.
+
+## Raias (pools e lanes): quem faz o quê
+
+Quando um processo envolve mais de uma área ou pessoa, o BPMN usa
+**raias** (lanes) dentro de uma **piscina** (pool) para mostrar quem é
+responsável por cada etapa. Isso deixa visualmente claro onde o processo
+"passa a bola" de uma área para outra — um dos pontos mais úteis do BPMN
+para identificar gargalos entre departamentos.
+
+## Um exemplo simples juntando tudo
+
+Um processo de aprovação de despesa poderia ser lido assim: evento de
+início ("despesa solicitada") → tarefa ("analisar valor") → gateway
+exclusivo ("valor acima do limite?") → um caminho vai direto para
+"aprovar" e o outro passa por uma tarefa extra ("enviar para gestor") →
+os dois caminhos se encontram → evento de fim ("despesa processada").
