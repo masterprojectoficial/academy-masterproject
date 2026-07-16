@@ -20,7 +20,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description: article.metaDescricao,
         type: 'article',
         publishedTime: article.dataPublicacao,
-        images: [article.imagemCapa],
       }
     };
   } catch {

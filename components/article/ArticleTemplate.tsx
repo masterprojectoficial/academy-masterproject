@@ -1,7 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Article } from "@/lib/content-schema";
-import FAQ from "../FAQ";
-import CTACursoBox from "../CTACurso";
+import FAQ from "./FAQ";
+import CTACursoBox from "./CTACurso";
 
 export default function ArticleTemplate({ article }: { article: Article }) {
   // SEO Schema Markup: Isso faz o Google mostrar seu artigo de forma rica
