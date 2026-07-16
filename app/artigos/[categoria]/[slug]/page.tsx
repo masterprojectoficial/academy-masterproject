@@ -1,35 +1,47 @@
-import type { Metadata } from "next";
-import { getArticle, getAllArticles } from "@/lib/content";
-import type { Categoria } from "@/lib/content-schema";
+import { getArticle, getCategorias, getSlugsByCategoria } from "@/lib/content";
 import ArticleTemplate from "@/components/article/ArticleTemplate";
+import { notFound } from "next/navigation";
+import { Metadata } from "next";
 
-interface Props {
-  params: { categoria: Categoria; slug: string };
-}
+type Props = {
+  params: { categoria: any; slug: string };
+};
 
-export function generateStaticParams() {
-  return getAllArticles().map((article) => ({
-    categoria: article.categoria,
-    slug: article.slug,
-  }));
-}
-
-export function generateMetadata({ params }: Props): Metadata {
-  const article = getArticle(params.categoria, params.slug);
-  return {
-    title: article.metaTitulo ?? article.titulo,
-    description: article.metaDescricao,
-    alternates: { canonical: `/artigos/${params.categoria}/${params.slug}` },
-    openGraph: {
-      title: article.titulo,
+// SEO Dinâmico e Poderoso
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  try {
+    const article = getArticle(params.categoria, params.slug);
+    return {
+      title: `${article.titulo} | Master Project`,
       description: article.metaDescricao,
-      images: article.imagemCapa ? [article.imagemCapa] : undefined,
-    },
-    robots: article.indexar === false ? { index: false } : undefined,
-  };
+      keywords: article.tags,
+      openGraph: {
+        title: article.titulo,
+        description: article.metaDescricao,
+        type: 'article',
+        publishedTime: article.dataPublicacao,
+        images: [article.imagemCapa],
+      }
+    };
+  } catch {
+    return { title: 'Artigo não encontrado | Master Project' };
+  }
 }
 
 export default function ArtigoPage({ params }: Props) {
-  const article = getArticle(params.categoria, params.slug);
-  return <ArticleTemplate article={article} />;
+  try {
+    const article = getArticle(params.categoria, params.slug);
+    return <ArticleTemplate article={article} />;
+  } catch (error) {
+    notFound();
+  }
+}
+
+// Gera as páginas estáticas para carregamento super rápido
+export async function generateStaticParams() {
+  const categorias = getCategorias();
+  return categorias.flatMap((categoria) => {
+    const slugs = getSlugsByCategoria(categoria);
+    return slugs.map((slug) => ({ categoria, slug }));
+  });
 }
