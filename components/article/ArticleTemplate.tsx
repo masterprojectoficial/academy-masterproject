@@ -37,6 +37,8 @@ export default function ArticleTemplate({ article }: { article: Article }) {
       </div>
 
       <FAQ items={article.faq} />
+
+      
     </main>
   );
 }
