@@ -30,9 +30,11 @@ export function getArticle(categoria: Categoria, slug: string): Article {
 
   return {
     ...frontmatter,
+    slug: slug,           
+    categoria: categoria,
     tempoLeituraMin:
       frontmatter.tempoLeituraMin ?? Math.ceil(readingTime(content).minutes),
-    contentHtml: content, // renderização MDX real acontece no componente da página
+    contentHtml: content,
   };
 }
 
