@@ -29,7 +29,8 @@ export type Categoria =
   | "power-bi"
   | "excel"
   | "okr"
-  | "ia";
+  | "ia"
+  | "pmi";
 
 export interface FAQItem {
   pergunta: string;
