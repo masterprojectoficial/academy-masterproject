@@ -4,7 +4,7 @@ import FAQ from "./FAQ";
 import CTACursoBox from "./CTACurso";
 
 export default function ArticleTemplate({ article }: { article: Article }) {
-  // SEO Schema Markup: Isso faz o Google mostrar seu artigo de forma rica
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -26,7 +26,7 @@ export default function ArticleTemplate({ article }: { article: Article }) {
 
       {/* Conteúdo com Tipografia Profissional */}
       <div className="prose prose-slate prose-lg max-w-none prose-headings:text-slate-900 prose-a:text-blue-600">
-        <MDXRemote source={article.contentHtml} />
+        <MDXRemote source={article.contentHtml} components={{ FAQ }} />
       </div>
 
       <hr className="my-12" />
