@@ -1,17 +1,17 @@
-import { getArticles } from "@/lib/content";
+import { getArticlesByTipo } from "@/lib/content";
 import CategoryFilterBar from "@/components/listing/CategoryFilterBar";
 import Link from "next/link";
 
-export default async function CarreiraPage() {
-  const allArticles = await getArticles();
-  const articles = allArticles.filter((art: any) => art.categoria === "carreira");
+export default async function FerramentasPage() {
+  const allArticles = await getArticlesByTipo("artigo");
+  const articles = allArticles.filter((art: any) => art.categoria === "ferramentas");
 
   return (
     <main className="max-w-6xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Carreira e Mercado</h1>
-      <p className="text-lg text-slate-600 mb-8">Guias estratégicos para acelerar sua ascensão profissional.</p>
+      <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Ferramentas de Gestão</h1>
+      <p className="text-lg text-slate-600 mb-8">Análises e comparativos das principais plataformas e softwares para escalar a produtividade do seu time.</p>
       
-      <CategoryFilterBar basePath="/artigos" ativa="carreira" />
+      <CategoryFilterBar basePath="/artigos" ativa="ferramentas" />
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
         {articles.map((article: any) => (

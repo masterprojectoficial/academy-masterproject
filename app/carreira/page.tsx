@@ -1,10 +1,10 @@
-import { getArticles } from "@/lib/content";
+import { getArticlesByTipo } from "@/lib/content";
 import CategoryFilterBar from "@/components/listing/CategoryFilterBar";
 import Link from "next/link";
 
 export default async function CarreiraPage() {
-  const allArticles = await getArticles();
-  const articles = allArticles.filter((art: any) => art.categoria === "carreira");
+  const allArticles = await getArticlesByTipo("artigo");
+const articles = allArticles.filter((art: any) => art.categoria === "carreira");
 
   return (
     <main className="max-w-6xl mx-auto px-6 py-12">
