@@ -18,7 +18,11 @@ export const CATEGORIAS: CategoriaInfo[] = [
   { nome: "Excel", slug: "excel", desc: "Planilhas e produtividade" },
   { nome: "OKR", slug: "okr", desc: "Metas e resultados-chave" },
   { nome: "Inteligência Artificial", slug: "ia", desc: "IA aplicada à gestão" },
-  {nome: "PMI", slug: "pmi", desc: "PMI"},
+  { nome: "PMI", slug: "pmi", desc: "PMI"},
+  { nome: "Glossário", slug: "glossario", desc: "Glossário" },
+  { nome: "Ferramentas", slug: "ferramentas", desc: "Ferramentas" },
+  { nome: "Templates", slug: "templates", desc: "Templates" },
+  { nome: "Carreira", slug: "carreira", desc: "Carreira" },
 ];
 
 export function getCategoriaInfo(slug: Categoria): CategoriaInfo | undefined {

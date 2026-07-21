@@ -18,19 +18,19 @@ export type ContentType =
   | "estudo-de-caso"
   | "faq";
 
-export type Categoria =
-  | "bpm"
-  | "bpmn"
-  | "bizagi"
-  | "jira"
-  | "gestao-de-projetos"
-  | "scrum"
-  | "kanban"
-  | "power-bi"
-  | "excel"
-  | "okr"
-  | "ia"
-  | "pmi";
+export type Categoria = 
+  | 'bpm' 
+  | 'bpmn' 
+  | 'jira' 
+  | 'okr' 
+  | 'power-bi' 
+  | 'scrum' 
+  | 'kanban' 
+  | 'pmi'
+  | 'glossario'
+  | 'ferramentas'
+  | 'templates'
+  | 'carreira';
 
 export interface FAQItem {
   pergunta: string;
