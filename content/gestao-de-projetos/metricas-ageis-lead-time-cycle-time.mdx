@@ -1,0 +1,61 @@
+---
+titulo: "Métricas Ágeis: Como Calcular Lead Time, Cycle Time e Throughput"
+metaDescricao: "Pare de medir esforço e comece a medir resultados. Aprenda o que são Métricas Ágeis (Lead Time, Cycle Time, Vazão) e como usar o Jira para escalar sua equipe."
+categoria: "gestao-de-projetos"
+dataPublicacao: "2026-08-11"
+tempoLeituraMin: 15
+imagemCapa: "/images/metricas-ageis.jpg"
+tags: ["Métricas Ágeis", "Lead Time", "Cycle Time", "Kanban", "Jira", "Produtividade"]
+tipo: "artigo"
+aulasGratuitasUrl: "https://cursos-online.masterproject.com.br/course/11"
+ctaCurso:
+  titulo: "Gestão Baseada em Dados com Jira (3 Aulas Grátis!)"
+  descricao: "Aprenda a configurar relatórios automáticos de Lead Time e Cycle Time na ferramenta líder do mercado global. Assista grátis!"
+  textoBotao: "Assistir às 3 Aulas Grátis"
+  url: "https://cursos-online.masterproject.com.br/course/2"
+---
+
+Muitos gestores confundem "trabalho duro" com "trabalho eficiente". Eles medem quantas horas a equipe ficou no escritório ou quantas linhas de código foram escritas. O problema é que o seu cliente não se importa com o esforço da sua equipe; ele se importa com a **entrega de valor**.
+
+Para abandonar o "achismo" e liderar com base na ciência dos dados, as empresas de tecnologia adotaram as **Métricas Ágeis**, fortemente baseadas no fluxo Kanban. 
+
+Se você quer ser um gestor de elite em 2026, você precisa dominar a Trindade das Métricas de Fluxo.
+
+## 1. Lead Time (O Relógio do Cliente)
+
+O Lead Time é a métrica mais importante para o negócio. Ele mede o tempo total desde o exato momento em que o cliente faz uma solicitação até o momento em que a solução é entregue nas mãos dele.
+
+* **O que ele mede:** A expectativa do mercado.
+* **Exemplo Prático:** Se o cliente pediu uma nova tela no aplicativo no dia 1, e ela foi pro ar no dia 15, o Lead Time foi de 15 dias. Não importa se a equipe ficou 10 dias esperando uma aprovação e só trabalhou de fato por 5 dias. Para o cliente, a espera foi de 15 dias.
+* **Como melhorar:** Reduzindo a burocracia, eliminando aprovações em excesso e automatizando o fluxo (deploy).
+
+## 2. Cycle Time (O Relógio da Produção)
+
+O Cycle Time (Tempo de Ciclo) mede apenas o tempo em que a equipe esteve **ativamente trabalhando** no item. Ele começa a contar quando o ticket sai da coluna "A Fazer" (To Do) e vai para "Fazendo" (Doing/In Progress).
+
+* **O que ele mede:** A eficiência da engenharia e da linha de produção.
+* **Por que é crucial?** Se o seu Cycle Time é de 3 dias, mas o seu Lead Time é de 20 dias, isso prova matematicamente que o problema não é a equipe de tecnologia ser lenta. O problema é que as tarefas passam 17 dias paradas em filas de espera ou validação. 
+
+## 3. Throughput (Vazão / Taxa de Entrega)
+
+Enquanto o Lead e o Cycle Time medem *tempo*, o Throughput mede *quantidade*. É o número total de itens concluídos e entregues em um período específico (por semana, Sprint ou mês).
+
+* **O que ele mede:** A velocidade de cruzeiro da sua equipe.
+* **Aplicações:** Se a sua vazão histórica é de 10 Histórias de Usuário por semana, é irracional o Product Owner tentar empurrar 25 Histórias na próxima Sprint Planning. O Throughput blinda a equipe contra prazos irreais e sobrecarga de trabalho.
+
+## Como o Jira Software resolve isso sozinho?
+
+Fazer esses cálculos no Excel é o caminho para a loucura. Plataformas como o **Jira Software** geram esses relatórios automaticamente. 
+
+O gráfico de *Control Chart* (Gráfico de Controle) do Jira plota todos os tickets entregues, mostrando o Cycle Time médio da equipe e identificando pontos fora da curva (outliers) para que o Scrum Master investigue o gargalo.
+
+---
+
+<FAQ 
+  items={[
+    {
+      pergunta: "Velocity (Scrum) é a mesma coisa que Throughput?",
+      resposta: "Não. O Velocity mede a soma de Story Points (esforço subjetivo) entregues em uma Sprint. O Throughput mede a quantidade real de itens concluídos, sem depender de estimativas. O mercado moderno prefere o Throughput por ser um dado empírico exato."
+    }
+  ]} 
+/>
