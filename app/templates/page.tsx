@@ -4,6 +4,7 @@ import Link from "next/link";
 
 export default async function TemplatesPage() {
   const allArticles = await getArticlesByTipo("artigo");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const articles = allArticles.filter((art: any) => art.categoria === "templates");
 
   return (
@@ -14,6 +15,7 @@ export default async function TemplatesPage() {
       <CategoryFilterBar basePath="/artigos" ativa="templates" />
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         {articles.map((article: any) => (
           <Link 
             key={article.slug} 
