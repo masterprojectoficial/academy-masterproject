@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 
@@ -46,7 +47,8 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <body className="bg-paper text-ink font-body antialiased">
         <SiteHeader />
-        <main>{children}</main>
+        <main>{children}
+  <Analytics /></main>
         <SiteFooter />
       </body>
     </html>
