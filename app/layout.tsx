@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
-import "./globals.css";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import SiteHeader from "@/components/layout/SiteHeader";
+import "./globals.css";
 import SiteFooter from "@/components/layout/SiteFooter";
 
 const display = Space_Grotesk({
