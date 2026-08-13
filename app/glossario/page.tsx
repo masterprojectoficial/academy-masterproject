@@ -4,6 +4,7 @@ import Link from "next/link";
 
 export default async function GlossarioPage() {
   const allArticles = await getArticlesByTipo("artigo");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const articles = allArticles.filter((art: any) => art.categoria === "glossario");
 
   return (

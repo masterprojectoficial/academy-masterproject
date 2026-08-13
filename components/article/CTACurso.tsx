@@ -1,5 +1,6 @@
-import type { CTACurso } from "@/lib/content-schema";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
+import type { CTACurso } from "@/lib/content-schema";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function CTACursoBox({ cta }: { cta: any }) {
   if (!cta) return null; // Não exibe nada se não houver dados
 
