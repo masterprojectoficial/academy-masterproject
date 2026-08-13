@@ -1,0 +1,62 @@
+---
+titulo: "Story Points e Planning Poker: Como Estimar Projetos Ágeis"
+metaDescricao: "Pare de tentar adivinhar prazos em horas. Aprenda o que são Story Points, a sequência de Fibonacci e como jogar o Planning Poker com sua equipe Scrum."
+categoria: "scrum"
+dataPublicacao: "2026-08-13"
+tempoLeituraMin: 14
+imagemCapa: "/images/story-points-planning.jpg"
+tags: ["Story Points", "Planning Poker", "Scrum", "Estimativas", "Agile", "Jira"]
+tipo: "artigo"
+aulasGratuitasUrl: "https://cursos-online.masterproject.com.br/course/11"
+ctaCurso:
+  titulo: "Domine o Planejamento de Sprints e Backlogs (3 Aulas Grátis!)"
+  descricao: "Aprenda a liderar sessões de estimativa profissionais, gerar previsibilidade e configurar o Jira para times de alta performance. Assista grátis!"
+  textoBotao: "Assistir às 3 Aulas Grátis"
+  url: "https://cursos-online.masterproject.com.br/course/2"
+---
+
+O cenário é clássico: o gerente pergunta ao desenvolvedor *"Quantas horas essa tarefa vai levar?"*. O desenvolvedor chuta "8 horas". Surgem problemas não previstos no código, a tarefa leva 20 horas, o cliente fica furioso e a confiança da equipe é destruída.
+
+O cérebro humano é péssimo em prever horas exatas para trabalhos complexos que nunca foram feitos antes. Para resolver a maldição das estimativas falhas, o mundo Ágil abandonou os relógios e adotou os **Story Points**.
+
+## O que são Story Points (Pontos de História)?
+
+Em vez de estimar tarefas em *horas*, as equipes Scrum estimam tarefas em *Pontos*. Story Points são uma unidade de medida relativa que representa o esforço geral necessário para implementar uma História de Usuário (tarefa).
+
+O Story Point é a soma de três fatores:
+1. **Volume de Trabalho:** O tamanho puro da tarefa.
+2. **Complexidade:** Quão difícil é o problema técnico a ser resolvido.
+3. **Incerteza e Risco:** Quantas coisas desconhecidas podem dar errado no caminho.
+
+## A Escala de Fibonacci
+
+Para atribuir os pontos, a maioria das equipes usa a Sequência de Fibonacci adaptada: **1, 2, 3, 5, 8, 13, 21**. 
+
+*Por que não usar 1, 2, 3, 4, 5?* Porque a distância entre 4 e 5 é muito pequena para diferenciar incertezas. Mas a distância entre 8 e 13 é clara. Se uma tarefa for maior que 13 pontos, a regra ágil diz que ela é complexa demais e deve ser "fatiada" (quebrada) em tarefas menores pelo Product Owner.
+
+## Como fazer as estimativas: O Planning Poker
+
+Para evitar que o desenvolvedor mais experiente da equipe imponha sua opinião e intimide os juniores, utiliza-se a técnica do **Planning Poker** (frequentemente realizada durante a reunião de *Refinamento* ou *Sprint Planning*).
+
+### Passo a Passo do Planning Poker:
+1. **Apresentação:** O Product Owner lê a História de Usuário para a equipe técnica e responde a todas as dúvidas.
+2. **A Escolha:** Cada desenvolvedor pega seu baralho (físico ou em aplicativos) com as cartas de Fibonacci e escolhe secretamente quantos pontos aquela tarefa vale.
+3. **A Revelação:** Todos revelam suas cartas simultaneamente.
+4. **O Consenso:** Se todos mostrarem "5", a tarefa recebe 5 pontos. Se houver discrepância (ex: alguém mostrou "2" e outro mostrou "13"), os extremos devem justificar suas razões. O grupo debate e joga novamente até atingirem um consenso.
+
+## A Métrica de Ouro: O Velocity (Velocidade)
+
+Após algumas Sprints, a equipe começa a ter um padrão. Exemplo: A equipe entrega uma média de **40 Story Points** por Sprint. Esse número mágico se chama *Velocity*.
+
+A partir de agora, o planejamento torna-se matemático e altamente preciso. Se o Backlog inteiro do cliente tem 400 pontos, e a equipe faz 40 por Sprint, o Scrum Master pode garantir com alta confiança que o projeto inteiro será entregue em 10 Sprints. Fim dos atrasos sem explicação!
+
+---
+
+<FAQ 
+  items={[
+    {
+      pergunta: "Podemos converter Story Points em Horas? (Ex: 1 ponto = 4 horas)",
+      resposta: "NUNCA. Fazer isso destrói o propósito da estimativa relativa. Um desenvolvedor Sênior faz uma tarefa de 5 pontos em 2 horas; um Júnior fará a mesma tarefa de 5 pontos em 10 horas. O esforço/complexidade (5 pontos) é o mesmo, mas a velocidade individual muda. Avalie apenas os pontos do time como um todo."
+    }
+  ]} 
+/>
