@@ -1,0 +1,55 @@
+---
+titulo: "Gráfico de Burndown: Como Ler e Prever Atrasos na sua Sprint"
+metaDescricao: "Aprenda a ler o Burndown Chart no Jira. Entenda como essa métrica visual do Scrum ajuda a equipe a visualizar o progresso e prever atrasos antes do fim da Sprint."
+categoria: "ferramentas"
+dataPublicacao: "2026-08-17"
+tempoLeituraMin: 12
+imagemCapa: "/images/burndown-chart.jpg"
+tags: ["Burndown Chart", "Métricas Ágeis", "Jira", "Scrum", "Sprint", "Gestão Visual"]
+tipo: "artigo"
+aulasGratuitasUrl: "https://cursos-online.masterproject.com.br/course/11"
+ctaCurso:
+  titulo: "Domine Métricas Ágeis e Relatórios no Jira (3 Aulas Grátis!)"
+  descricao: "Pare de adivinhar o progresso da equipe. Aprenda a configurar e ler gráficos de Burndown, Control Chart e Velocity para uma gestão baseada em dados reais."
+  textoBotao: "Assistir às 3 Aulas Grátis"
+  url: "https://cursos-online.masterproject.com.br/course/2"
+---
+
+Na metodologia tradicional, gestores precisavam esperar o final do mês para ler um relatório de 50 páginas e descobrir que o projeto estava atrasado. No Scrum, as equipes identificam atrasos com 24 horas de antecedência através de uma leitura visual de 10 segundos.
+
+A ferramenta responsável por essa transparência brutal é o **Gráfico de Burndown (Burndown Chart)**, gerado automaticamente por plataformas como o **Jira Software**.
+
+## O que é o Burndown Chart?
+
+O Burndown é um gráfico que mostra, em tempo real, **o esforço restante** (eixo Y) em relação ao **tempo restante** (eixo X) de uma Sprint. A tradução livre seria "Gráfico de Queima", pois ele ilustra a equipe "queimando" o volume de tarefas conforme os dias passam, até chegar a zero.
+
+## A Anatomia do Gráfico (A Linha Cinza vs A Linha Vermelha)
+
+Ao abrir a aba de relatórios da sua Sprint no Jira, você verá duas linhas principais:
+
+1.  **A Linha Ideal (Geralmente Cinza e Reta):** Ela começa no topo (total de tarefas estimadas) e desce em uma diagonal perfeita até o dia final da Sprint no marco zero. Ela mostra o ritmo exato que a equipe *deveria* seguir para terminar tudo no prazo.
+2.  **A Linha Real (Geralmente Vermelha e Serrilhada):** Ela mostra o que está *realmente* acontecendo. Cada vez que um desenvolvedor arrasta uma tarefa para "Done" (Concluído), a linha vermelha cai. 
+
+## Como Diagnosticar Problemas Lendo o Gráfico
+
+O trabalho do Scrum Master e da equipe durante a *Daily Scrum* é olhar para essa linha e diagnosticar problemas rapidamente:
+
+*   **Linha Real está abaixo da Linha Ideal:** Cenário excelente! A equipe está trabalhando mais rápido do que o planejado. Provavelmente terminarão a Sprint mais cedo e poderão puxar mais tarefas do Backlog.
+*   **Linha Real está muito acima da Linha Ideal:** Alerta vermelho. A equipe não está conseguindo terminar as tarefas. O Scrum Master precisa intervir: há algum servidor fora do ar bloqueando o time? A tarefa era maior do que estimamos?
+*   **Gráfico "Platô" (Linha reta por dias):** Isso significa que a equipe está trabalhando (os cards estão na coluna "Fazendo"), mas nada chega na coluna "Concluído". É o famoso sintoma de que as Histórias de Usuário são muito grandes e não foram devidamente fatiadas.
+*   **O "Penhasco" no último dia:** A linha fica reta a semana inteira e despenca para zero no último dia. Isso mostra que a equipe testou e entregou tudo correndo no final da Sprint. A qualidade do código provavelmente está comprometida.
+
+## A Regra de Ouro da Atualização
+
+O Burndown só funciona se o time atualizar o Kanban **diariamente**. Se o desenvolvedor termina a tarefa na segunda-feira, mas só move o cartão no Jira na sexta-feira, o gráfico mentirá para a diretoria, quebrando o Pilar da Transparência do Scrum.
+
+---
+
+<FAQ 
+  items={[
+    {
+      pergunta: "Qual a diferença entre Burndown e Burnup Chart?",
+      resposta: "O Burndown mostra quanto trabalho FALTA fazer (a linha desce em direção ao zero). O Burnup mostra quanto trabalho JÁ FOI FEITO em comparação com o total do escopo (as linhas sobem). O Burnup é excelente para Épicos longos, pois mostra claramente quando o cliente adicionou escopo novo no meio do caminho."
+    }
+  ]} 
+/>
