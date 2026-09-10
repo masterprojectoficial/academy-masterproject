@@ -1,0 +1,70 @@
+---
+titulo: "Template de Product Backlog: Estrutura Perfeita (Com Exemplos Práticos)"
+metaDescricao: "Pare de travar a equipe técnica com requisitos ruins. Copie nosso template de Product Backlog estruturado com Épicos, User Stories e Critérios de Aceite."
+categoria: "scrum"
+dataPublicacao: "2026-09-10"
+tempoLeituraMin: 14
+imagemCapa: "/images/template-product-backlog.jpg"
+tags: ["Template", "Product Backlog", "Product Owner", "User Story", "Scrum"]
+tipo: "artigo"
+aulasGratuitasUrl: "https://cursos-online.masterproject.com.br/course/11"
+ctaCurso:
+  titulo: "Domine a Escrita de Requisitos Ágeis (3 Aulas Grátis!)"
+  descricao: "Aprenda a fatiar Épicos, escrever histórias perfeitas e gerenciar o Product Backlog no Jira Software com maestria. Assista sem custos."
+  textoBotao: "Assistir às 3 Aulas Grátis"
+  url: "https://cursos-online.masterproject.com.br/course/2"
+---
+
+O *Product Backlog* é o coração de qualquer produto ágil. Se ele for apenas uma "lista de desejos" mal escrita, a equipe de engenharia construirá a funcionalidade errada e o dinheiro da empresa irá para o ralo.
+
+Product Owners (POs) de elite não perdem tempo reinventando a roda. Eles utilizam estruturas validadas (frameworks) para descrever o trabalho com clareza matemática. Abaixo, disponibilizamos a estrutura exata que você deve usar nas suas ferramentas (Jira, Trello ou Azure DevOps).
+
+## A Estrutura em 3 Níveis
+
+Para organizar centenas de demandas, você precisa quebrar o trabalho em hierarquia:
+
+1.  **ÉPICO (A Grande Visão):** Uma iniciativa estratégica que leva semanas ou meses.
+2.  **HISTÓRIA DE USUÁRIO (O Valor):** O pedaço do Épico que pode ser entregue em 1 Sprint.
+3.  **SUBTAREFAS (A Execução Técnica):** Como os desenvolvedores vão fazer o código acontecer.
+
+## Exemplo Prático de Preenchimento
+
+Imagine que o nosso Épico seja: **"Criar um sistema de Login e Autenticação de Usuários"**.
+
+### A História de Usuário (User Story)
+A regra de ouro é usar o formato: `Como um [Perfil], eu quero [Ação] para que [Benefício/Valor]`.
+
+*   **Título do Card:** Login via Google (SSO)
+*   **Descrição:** *Como um* usuário novo do aplicativo, *eu quero* poder me cadastrar usando minha conta do Google, *para que* eu não precise criar e memorizar uma nova senha, acessando o sistema em segundos.
+
+### Os Critérios de Aceite (BDD Format)
+A História explica a dor, mas são os *Critérios de Aceite* que definem quando o cartão pode ser arrastado para a coluna de "Concluído" (*Definition of Done*). Use a estrutura `Dado que / Quando / Então`.
+
+*   **Cenário 1: Login com Sucesso (Caminho Feliz)**
+    *   **Dado que** o usuário está na tela inicial de login;
+    *   **Quando** ele clica no botão "Entrar com o Google" e aprova a permissão no pop-up;
+    *   **Então** o sistema deve redirecioná-lo para o Painel de Controle e exibir a mensagem "Bem-vindo".
+
+*   **Cenário 2: Tratamento de Erro**
+    *   **Dado que** o usuário está tentando fazer o login;
+    *   **Quando** a API do Google estiver indisponível ou a internet cair;
+    *   **Então** o sistema não deve travar, mas sim exibir o alerta vermelho: "Serviço indisponível no momento. Tente usar e-mail e senha".
+
+## O Segredo da Priorização (DEEP)
+
+Para garantir que o seu template de Backlog seja funcional, ele deve seguir a sigla **DEEP**:
+*   **D**etalhado apropriadamente (itens do topo bem explicados, itens do fundo vagos).
+*   **E**stimado (com Story Points, pelo menos os itens do topo).
+*   **E**mergente (ele muda todos os dias conforme o mercado muda).
+*   **P**riorizado (o que dá mais lucro ou resolve mais riscos fica em cima).
+
+---
+
+<FAQ 
+  items={[
+    {
+      pergunta: "Quem é o único responsável por adicionar itens no Product Backlog?",
+      resposta: "Segundo o Scrum Guide, o Product Owner (PO) é o único dono e responsável por gerenciar o Backlog. Outras pessoas podem sugerir ideias, mas a decisão final de prioridade é sempre do PO."
+    }
+  ]} 
+/>
