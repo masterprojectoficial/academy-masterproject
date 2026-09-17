@@ -1,0 +1,116 @@
+---
+titulo: "Guia Completo do Jira Software: Do Zero ao Nível Avançado em 2026"
+metaDescricao: "Aprenda a dominar o Jira Software do zero ao avançado. Guia completo com configuração de Workflows, Backlog, Automações e Dashboards para times de elite."
+categoria: "ferramentas"
+dataPublicacao: "2026-09-17"
+tempoLeituraMin: 20
+imagemCapa: "/images/guia-jira-software.jpg"
+tags: ["Jira", "Jira Software", "Metodologias Ágeis", "Scrum", "Kanban", "Gestão de Projetos", "Atlassian"]
+tipo: "artigo"
+aulasGratuitasUrl: "https://cursos-online.masterproject.com.br/course/11"
+ctaCurso:
+  titulo: "Domine o Jira Software na Prática (3 Aulas Grátis!)"
+  descricao: "A teoria não segura emprego. Aprenda a configurar ambientes profissionais do Jira, criar regras de automação e gerar relatórios executivos."
+  textoBotao: "Assistir às 3 Aulas Grátis"
+  url: "https://cursos-online.masterproject.com.br/course/2"
+---
+
+Mais de 80% das maiores empresas de tecnologia e corporações globais usam o **Jira Software** como a espinha dorsal de suas operações. Saber usar o Jira de forma avançada deixou de ser um "diferencial" e tornou-se requisito básico de sobrevivência para Scrum Masters, Product Owners, Gerentes de Projetos e Desenvolvedores.
+
+Este guia prático ensina exatamente como estruturar projetos, organizar Backlogs, criar Workflows customizados e automatizar tarefas para transformar você em uma referência técnica no sistema.
+
+---
+
+## 1. Conceitos Fundamentais do Jira
+
+Antes de clicar em qualquer botão, você precisa entender a arquitetura interna do Jira Software:
+
+* **Site (Instância):** O ambiente global da sua empresa (`suaempresa.atlassian.net`).
+* **Projeto:** O container onde ficam reunidas as tarefas de uma equipe ou produto (ex: Projeto "App Mobile", Projeto "CRM Integrado").
+* **Issue (Item de Trabalho):** A unidade fundamental do Jira. Tudo no Jira é uma Issue — seja uma História de Usuário, um Bug, uma Tarefa operacional ou um Épico.
+* **Workflow (Fluxo de Trabalho):** O caminho estruturado que uma Issue percorre do nascimento até a conclusão (ex: *To Do* ➔ *In Progress* ➔ *In Review* ➔ *Done*).
+
+---
+
+## 2. Tipos de Projetos: Scrum vs. Kanban no Jira
+
+Ao criar um novo projeto no Jira, você enfrentará a primeira grande decisão técnica: **Scrum ou Kanban?**
+
+### Quando escolher o Modelo Scrum?
+Escolha o modelo **Scrum** se a sua equipe trabalha com ciclos de tempo fixos (Sprints de 1 a 4 semanas), precisa estimar complexidade (*Story Points*) e busca prever capacidade de entrega com gráficos de *Velocity* e *Burndown*.
+
+### Quando escolher o Modelo Kanban?
+Escolha o modelo **Kanban** se o seu time lida com fluxo contínuo de demandas sem datas rígidas de entrega (como times de Suporte, Infraestrutura, Marketing ou Operações). O foco aqui é limitar o trabalho em andamento (*WIP Limit*) e otimizar o *Lead Time*.
+
+---
+
+## 3. Hierarquia das Issues (Como Estruturar Demandas)
+
+Para manter um Backlog limpo e legível para a diretoria, organize suas demandas respeitando a hierarquia nativa:
+
+1. **Iniciativa (Opcional - Nível Executivo):** Grandes metas estratégicas organizacionais que englobam múltiplos Épicos ao longo do ano.
+2. **Épico (Epic):** Uma grande funcionalidade ou entrega que leva semanas/meses para ser concluída (ex: *"Implementar Checkout Transparente"*).
+3. **História de Usuário (User Story) / Task / Bug:**
+   * **Story:** Requisito focado na experiência do cliente.
+   * **Task:** Tarefa técnica ou operacional interna.
+   * **Bug:** Defeito identificado no sistema que precisa de correção.
+4. **Subtarefa (Sub-task):** Quebra operacional técnica de uma Story ou Task, realizada por uma única pessoa em poucas horas.
+
+---
+
+## 4. Como Configurar um Workflow Personalizado
+
+O maior erro dos gestores iniciantes é utilizar apenas o fluxo padrão (*To Do ➔ In Progress ➔ Done*). Processos corporativos reais exigem validação e governança.
+
+### Criando um Fluxo Profissional no Jira:
+1. Vá em **Configurações do Projeto** ➔ **Workflows**.
+2. Clique em **Editar Workflow**.
+3. Adicione os status intermediários necessários, tais como:
+   * `A Fazer` (Backlog da Sprint)
+   * `Em Desenvolvimento` (Devs trabalhando)
+   * `Code Review` (Revisão por pares)
+   * `Em Homologação / QA` (Testes de qualidade)
+   * `Concluído` (Pronto para produção)
+4. Defina **Transições Rígidas:** Configure regras para proibir que uma tarefa salte direto de `A Fazer` para `Concluído` sem passar pelo teste de QA.
+
+---
+
+## 5. Automações sem Código (O Poder do Atlassian Automation)
+
+A automação nativa do Jira economiza horas de trabalho braçal semanal do Scrum Master e do Gerente de Projetos.
+
+### Exemplo 1: Transição Automática do Épico
+* **Gatilho (Trigger):** Quando o status de uma Issue muda para "Em Desenvolvimento".
+* **Condição (Condition):** Se a Issue possui um Épico pai.
+* **Ação (Action):** Mudar o status do Épico pai para "Em Andamento" automaticamente.
+
+### Exemplo 2: Atribuição Automática por Especialidade
+* **Gatilho:** Quando um novo Bug for criado no projeto.
+* **Condição:** Se o componente selecionado for "Banco de Dados".
+* **Ação:** Atribuir a Issue diretamente para o Líder Técnico de Dados e enviar notificação de alta prioridade no Slack/Teams.
+
+---
+
+## 6. Dashboards e Relatórios Executivos em Tempo Real
+
+Diretores não querem navegar por quadros com centenas de cartões. Eles querem dados consolidados para tomada de decisão.
+
+### Os 3 Gráficos Indispensáveis:
+1. **Burndown Chart:** Mostra a quantidade de trabalho restante na Sprint dia a dia. Se a linha real estiver acima da linha guia ideal, a Sprint está atrasada.
+2. **Velocity Chart:** Mede a média de Story Points entregues nas últimas Sprints. Use essa métrica para planejar com precisão a capacidade das próximas Sprints.
+3. **Control Chart (Para Kanban):** Analisa o *Cycle Time* das tarefas. Quanto menor a dispersão dos pontos no gráfico, mais previsível é o seu processo de entrega.
+
+---
+
+<FAQ 
+  items={[
+    {
+      pergunta: "Qual a diferença entre Jira Software Team-Managed e Company-Managed?",
+      resposta: "Os projetos Team-Managed são mais simples e dão autonomia total para a equipe alterar regras e campos sem precisar de um Administrador. Os projetos Company-Managed são padronizados centralidamente pela TI da empresa, sendo o modelo padrão para grandes corporações que exigem forte governança."
+    },
+    {
+      pergunta: "Posso usar o Jira de graça?",
+      resposta: "Sim! O Jira oferece um plano gratuito permanente para até 10 usuários, incluindo quadros Scrum e Kanban, automações básicas e armazenamento ilimitado em nuvem."
+    }
+  ]} 
+/>
