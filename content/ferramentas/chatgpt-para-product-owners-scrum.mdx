@@ -1,0 +1,66 @@
+---
+titulo: "ChatGPT para Product Owners: Como Escrever User Stories em Segundos"
+metaDescricao: "Pare de perder horas escrevendo requisitos. Aprenda os prompts exatos para usar o ChatGPT na criação de User Stories, Épicos e Critérios de Aceite no Jira."
+categoria: "ferramentas"
+dataPublicacao: "2026-09-18"
+tempoLeituraMin: 11
+imagemCapa: "/images/chatgpt-product-owner.jpg"
+tags: ["ChatGPT", "Inteligência Artificial", "Product Owner", "Scrum", "Jira", "User Story"]
+tipo: "artigo"
+aulasGratuitasUrl: "https://cursos-online.masterproject.com.br/course/11"
+ctaCurso:
+  titulo: "Gestão Ágil com Inteligência Artificial (3 Aulas Grátis!)"
+  descricao: "Aprenda a integrar ferramentas de IA ao Jira para automatizar a criação do seu Product Backlog e escalar sua produtividade."
+  textoBotao: "Assistir às 3 Aulas Grátis"
+  url: "https://cursos-online.masterproject.com.br/course/2"
+---
+
+Escrever *User Stories* (Histórias de Usuário) e Critérios de Aceite BDD de forma manual é o maior ralo de produtividade de um Product Owner (PO). Em 2026, líderes de produto de alta performance não digitam requisitos do zero; eles atuam como editores de Inteligência Artificial.
+
+Utilizar o ChatGPT corretamente não substitui o seu raciocínio estratégico, mas elimina 80% do trabalho braçal de documentação, permitindo que você foque em reuniões com stakeholders e análise de métricas.
+
+## O Erro do Prompt Genérico
+
+Se você pedir para a IA: *"Escreva uma história de usuário para uma tela de login"*, ela entregará um texto raso e inútil para os desenvolvedores. Para o ChatGPT gerar cartões prontos para o Jira, você precisa fornecer **Contexto, Formato e Regras de Negócio**.
+
+## O Prompt Matador para Épicos e Histórias
+
+Copie e cole a estrutura abaixo no seu ChatGPT (ou Claude) e preencha os espaços entre colchetes.
+
+**Prompt:**
+*Atue como um Product Owner Sênior. O nosso sistema é um [aplicativo de delivery focado em comida saudável]. Preciso que você desdobre a seguinte funcionalidade: [Implementar pagamento via PIX no checkout].*
+
+*Por favor, gere a saída no seguinte formato:*
+*1. Título do Épico.*
+*2. Título da User Story principal.*
+*3. Descrição no formato: Como um [perfil], eu quero [ação], para que [valor/resultado].*
+*4. Pelo menos 3 Critérios de Aceite no formato BDD (Dado que, Quando, Então), cobrindo o Caminho Feliz, Tratamento de Erro e Cenário Alternativo.*
+
+### O Resultado Gerado (Pronto para o Jira):
+* **Épico:** Checkout Transparente e Múltiplos Pagamentos
+* **User Story:** Pagamento via PIX com QR Code Dinâmico
+* **Descrição:** Como um cliente final, eu quero selecionar o PIX como método de pagamento e visualizar o QR Code na tela, para que eu possa finalizar meu pedido em segundos sem precisar de cartão de crédito.
+* **Critério de Aceite 1 (Caminho Feliz):** 
+  * **Dado que** o cliente está na tela de pagamento final;
+  * **Quando** ele seleciona "PIX" e clica em "Gerar Pagamento";
+  * **Então** o sistema deve exibir um QR Code dinâmico e o código "Copia e Cola" com validade de 5 minutos.
+
+## Refinando Estimativas (Planning Poker com IA)
+
+Você também pode pedir para a IA encontrar falhas lógicas na sua história antes de apresentá-la para a equipe técnica na reunião de *Refinamento*. 
+
+**Prompt Adicional:** 
+*Atue como um Desenvolvedor Sênior e um Engenheiro de QA. Leia a User Story acima e liste 3 possíveis cenários de erro extremos (edge cases) que eu esqueci de mapear. Seja crítico.*
+
+A IA apontará cenários como falha de API do banco central ou timeout de rede, permitindo que você adicione esses critérios ao Backlog antes que os desenvolvedores façam as perguntas.
+
+---
+
+<FAQ 
+  items={[
+    {
+      pergunta: "Posso colar informações sensíveis da minha empresa no ChatGPT?",
+      resposta: "Não. Nunca insira dados reais de clientes, senhas, chaves de API ou código-fonte confidencial. Use o ChatGPT apenas para a estrutura lógica e regras de negócio genéricas, refinando os dados sensíveis diretamente no seu Jira."
+    }
+  ]} 
+/>
