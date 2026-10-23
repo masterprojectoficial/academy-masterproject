@@ -1,0 +1,51 @@
+---
+titulo: "Definition of Done (DoD) vs Critérios de Aceite: A Diferença Definitiva"
+metaDescricao: "Pare de acumular bugs. Entenda a diferença entre Definition of Done (DoD) e Critérios de Aceite no Scrum e como garantir entregas perfeitas no Jira."
+categoria: "scrum"
+dataPublicacao: "2026-10-24"
+tempoLeituraMin: 8
+imagemCapa: "/images/dod-vs-criterios-aceite.jpg"
+tags: ["Definition of Done", "DoD", "Critérios de Aceite", "Scrum", "Product Owner", "Qualidade"]
+tipo: "artigo"
+aulasGratuitasUrl: "https://cursos-online.masterproject.com.br/course/11"
+ctaCurso:
+  titulo: "Especialize-se na Criação de Requisitos Ágeis (3 Aulas Grátis!)"
+  descricao: "Aprenda a configurar o Definition of Done no Jira e a escrever Critérios de Aceite infalíveis. Assuma o controle da qualidade da sua equipe."
+  textoBotao: "Assistir às 3 Aulas Grátis"
+  url: "https://cursos-online.masterproject.com.br/course/2"
+---
+
+Quando um desenvolvedor diz "Terminei", o que isso realmente significa? Ele apenas escreveu o código? Ele testou? Ele subiu para o servidor? 
+
+A falta de clareza nessa única palavra é o que causa o colapso de sistemas em sextas-feiras à noite. Para blindar a qualidade do produto, o Scrum utiliza duas travas de segurança essenciais: os **Critérios de Aceite** e a **Definition of Done (DoD)**. Confundir os dois é o erro número um de equipes imaturas.
+
+## Critérios de Aceite (A Regra Específica)
+Os Critérios de Aceite são regras de negócio exclusivas para **uma única História de Usuário**. Eles respondem à pergunta: *O que essa funcionalidade específica precisa fazer para o cliente ficar feliz?*
+
+* **Quem escreve:** O Product Owner (PO).
+* **Foco:** Comportamento do sistema.
+* **Exemplo para um Cartão de "Login":** "O usuário deve ser bloqueado após 3 tentativas de senha incorreta". Isso só se aplica à tela de login.
+
+## Definition of Done - DoD (A Regra Global)
+A Definition of Done (Definição de Pronto) é um checklist técnico universal. Ela se aplica a **absolutamente todas as tarefas** da Sprint, seja a tela de login ou um botão de pagamento. Ela responde à pergunta: *O que nosso código precisa ter para não quebrar a empresa?*
+
+* **Quem escreve:** A Equipe de Desenvolvimento (Developers).
+* **Foco:** Qualidade técnica e engenharia de software.
+* **Exemplo de Checklist DoD:** 
+  1. O código foi revisado por outro programador (Code Review).
+  2. Os testes automatizados passaram em 100%.
+  3. A funcionalidade está homologada no ambiente de testes.
+
+## O Fluxo de Segurança no Jira
+Para uma tarefa ser arrastada para a coluna final "Concluído" no Jira Software, ela deve passar pelos dois filtros. O código deve atender aos Critérios de Aceite (o PO aprova) E deve cumprir o checklist da DoD (a engenharia aprova). Se faltar um dos dois, a tarefa volta para "Em Andamento".
+
+---
+
+<FAQ 
+  items={[
+    {
+      pergunta: "O Product Owner pode alterar a Definition of Done (DoD)?",
+      resposta: "Não. O Scrum Guide define que a DoD é de responsabilidade técnica dos Developers (ou da organização como um todo). O PO pode exigir qualidade, mas são os engenheiros que definem o rigor técnico para garantir que o software não quebre."
+    }
+  ]} 
+/>
