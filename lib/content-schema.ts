@@ -34,7 +34,8 @@ export type Categoria =
   | 'glossario'
   | 'ferramentas'
   | 'templates'
-  | 'carreira';
+  | 'carreira'
+  | 'tecnologia';
 
 export interface FAQItem {
   pergunta: string;

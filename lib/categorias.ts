@@ -23,6 +23,7 @@ export const CATEGORIAS: CategoriaInfo[] = [
   { nome: "Ferramentas", slug: "ferramentas", desc: "Ferramentas" },
   { nome: "Templates", slug: "templates", desc: "Templates" },
   { nome: "Carreira", slug: "carreira", desc: "Carreira" },
+  { nome: "Tecnologia", slug: "tecnologia", desc: "Tecnologia" },
 ];
 
 export function getCategoriaInfo(slug: Categoria): CategoriaInfo | undefined {
