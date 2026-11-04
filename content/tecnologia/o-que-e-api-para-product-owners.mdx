@@ -1,0 +1,58 @@
+---
+titulo: "O que é API? Explicação Simples para Product Owners e Gestores"
+metaDescricao: "Pare de passar vergonha nas reuniões técnicas. Entenda o que é uma API sem jargões complexos e aprenda a escrever histórias de usuário perfeitas."
+categoria: "tecnologia"
+dataPublicacao: "2026-11-04"
+tempoLeituraMin: 9
+imagemCapa: "/images/o-que-e-api.jpg"
+tags: ["API", "Product Owner", "Tecnologia para Gestores", "Scrum Master", "Engenharia de Software"]
+tipo: "artigo"
+aulasGratuitasUrl: "https://cursos-online.masterproject.com.br/course/11"
+ctaCurso:
+  titulo: "Lidere Desenvolvedores com Confiança (3 Aulas Grátis!)"
+  descricao: "Aprenda a traduzir jargões técnicos em negócios e crie Requisitos e Backlogs que a sua equipe de engenharia vai adorar."
+  textoBotao: "Assistir às 3 Aulas Grátis"
+  url: "https://cursos-online.masterproject.com.br/course/2"
+---
+
+O cenário é clássico: você, como Product Owner (PO) ou Analista de Negócios, senta na reunião de planejamento (*Sprint Planning*). Os desenvolvedores começam a falar que *"precisam consumir a API do cliente para renderizar o frontend"*. Você sorri, concorda com a cabeça e anota no caderno, sem ter a menor ideia do que eles acabaram de dizer.
+
+Não saber programar é aceitável para um gestor. Mas não entender como os sistemas conversam entre si destrói a sua autoridade técnica. 
+
+Vamos desmistificar o que é uma **API (Application Programming Interface)** de forma definitiva, sem uma única linha de código.
+
+## A Metáfora do Restaurante (Como uma API Funciona)
+
+Imagine que você está sentado em um restaurante. 
+Você (o sistema **Frontend** / Aplicativo) está com fome e olha o cardápio. Lá na cozinha está o chef de cozinha (o sistema **Backend** / Banco de Dados) que tem toda a comida, mas você não pode simplesmente invadir a cozinha e pegar a panela.
+
+Como você faz o seu pedido chegar na cozinha e a comida voltar para a sua mesa? Você chama o **Garçom**.
+
+A **API é o Garçom**. 
+Ela é o mensageiro que pega a sua requisição (*"Quero um hambúrguer"*), leva até o sistema que tem a informação, traduz esse pedido para a cozinha e, minutos depois, traz a resposta pronta (o prato) de volta para você.
+
+## Exemplos Reais no Dia a Dia
+
+Sistemas modernos não criam tudo do zero; eles alugam a "cozinha" dos outros através de APIs.
+* **Uber e Google Maps:** O Uber não gastou bilhões construindo satélites. Ele utiliza a API do Google Maps. O app do Uber pede: *"Google, qual a distância entre a rua X e Y?"*. A API do Google devolve o tempo e a rota.
+* **E-commerce e Pagamento:** Quando você compra uma geladeira, a loja não processa o seu cartão. Ela envia os números do cartão via API para a Cielo ou Stripe. A API da Cielo devolve: *"Pagamento aprovado"*.
+
+## Como a API Impacta o Product Owner no Jira?
+
+Se você não entende de APIs, você criará Histórias de Usuário (*User Stories*) impossíveis ou incompletas no seu Jira Software.
+
+Quando o cliente pedir um botão de "Entrar com o Facebook", você não pode apenas escrever *"Criar botão de login"*. Você precisa prever o esforço de integração. 
+
+**Como um PO sênior escreve esse Critério de Aceite:**
+*"O sistema deve se conectar à API oficial de Autenticação do Facebook. Se a API estiver fora do ar ou retornar falha, o nosso aplicativo deve exibir a mensagem 'Serviço temporariamente indisponível' e não travar a tela do usuário."*
+
+---
+
+<FAQ 
+  items={[
+    {
+      pergunta: "O que é uma API REST ou RESTful?",
+      resposta: "É apenas um padrão de regras para a API. Voltando ao restaurante: REST é garantir que o garçom fale a mesma língua que o cozinheiro e traga os pedidos em um formato organizado (como JSON), para que qualquer sistema do mundo consiga entender."
+    }
+  ]} 
+/>
