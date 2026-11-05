@@ -1,0 +1,84 @@
+---
+titulo: "Git e GitHub para Iniciantes: O Guia Definitivo (Sem Complicação)"
+metaDescricao: "Aprenda a diferença entre Git e GitHub do zero. Guia prático com comandos essenciais, como criar seu portfólio no GitHub e integrar com a equipe."
+categoria: "ferramentas"
+dataPublicacao: "2026-11-05"
+tempoLeituraMin: 12
+imagemCapa: "/images/git-e-github-iniciantes.jpg"
+tags: ["Git", "GitHub", "DevOps", "Engenharia de Software", "Portfólio", "Ferramentas"]
+tipo: "artigo"
+aulasGratuitasUrl: "https://cursos-online.masterproject.com.br/course/11"
+ctaCurso:
+  titulo: "Domine Ferramentas de Tecnologia e Gestão (3 Aulas Grátis!)"
+  descricao: "Aprenda a integrar versionamento de código, gestão no Jira e automação de processos na prática corporativa."
+  textoBotao: "Assistir às 3 Aulas Grátis"
+  url: "https://cursos-online.masterproject.com.br/course/2"
+---
+
+Se você quer trabalhar em qualquer área da Tecnologia da Informação — seja como desenvolvedor, analista de dados, Product Owner ou Scrum Master —, entender o funcionamento de **Git e GitHub** é o requisito número um de entrada.
+
+Muitos iniciantes travam no início porque acham que Git e GitHub são a mesma coisa ou porque se assustam com telas pretas de terminal. Neste artigo, vamos desmistificar o versionamento de código de forma definitiva.
+
+---
+
+## 1. A Diferença Definitiva: Git vs. GitHub
+
+Para não passar vergonha no mercado, guarde esta analogia simples:
+
+* **Git é a ferramenta local (O "Salvar" com histórico):** É um software gratuito instalado no seu computador que monitora todas as alterações feitas nos arquivos de um projeto. Ele funciona como uma máquina do tempo: permite voltar a qualquer versão anterior se o código quebrar.
+* **GitHub é a nuvem corporativa (A "Rede Social" de Projetos):** É uma plataforma online (da Microsoft) onde você envia o código gerenciado pelo Git. Ela permite armazenar projetos na nuvem, colaborar com outros profissionais e exibir seu portfólio para recrutadores.
+
+> **Resumo:** O Git roda offline na sua máquina. O GitHub roda online na nuvem.
+
+---
+
+## 2. Conceitos Fundamentais Que Você Deve Dominar
+
+### Repositório (Repository ou Repo)
+É a pasta do seu projeto monitorada pelo Git. Pode ser local (no seu computador) ou remoto (no GitHub).
+
+### Commit (A Foto do Momento)
+Um *Commit* é como salvar o jogo em um videogame. Ele registra um ponto na história do projeto com uma mensagem explicativa (ex: `"feat: adicionado botão de login via PIX"`).
+
+### Branch (O Ramal de Trabalho)
+Permite duplicar o código para testar uma funcionalidade nova sem estragar o sistema que já está funcionando em produção.
+* **main ou master:** O código oficial que está rodando para o cliente final.
+* **feature/nova-tela:** A cópia onde o desenvolvedor trabalha isolado.
+
+### Pull Request (PR)
+O pedido de integração. Quando o trabalho na *Branch* é concluído, o profissional abre um *Pull Request* pedindo para o líder técnico revisar o código antes de juntar (*Merge*) na versão principal.
+
+---
+
+## 3. Os 5 Comandos Essenciais do Dia a Dia
+
+Para começar a usar o Git no terminal ou no VS Code, você só precisa memorizar esta sequência lógica:
+
+1. `git init` — Transforma a pasta atual em um repositório Git.
+2. `git add .` — Seleciona todos os arquivos alterados para o próximo salvamento.
+3. `git commit -m "mensagem"` — Salva o histórico das alterações com uma descrição.
+4. `git branch -M main` — Define a ramificação principal do projeto.
+5. `git push -u origin main` — Envia o histórico local diretamente para a nuvem do GitHub.
+
+---
+
+## 4. Por Que Gestores e POs Devem Entender GitHub?
+
+Se você atua como **Product Owner (PO)** ou **Scrum Master**, o GitHub é onde a entrega real da sua equipe acontece.
+
+Ao conectar o seu **Jira Software** com o **GitHub**, o status das *User Stories* atualiza automaticamente: quando o desenvolvedor abre um *Pull Request* no GitHub referenciando o código do cartão, a tarefa no Jira move sozinha de `Em Desenvolvimento` para `Code Review`. Isso elimina reuniões de status desnecessárias e traz governança automática para o processo.
+
+---
+
+<FAQ 
+  items={[
+    {
+      pergunta: "O GitHub é totalmente gratuito?",
+      resposta: "Sim! O GitHub oferece repositórios públicos e privados ilimitados para projetos individuais e pequenas equipes gratuitamente. Planos pagos são voltados para grandes empresas que exigem recursos avançados de segurança e governança corporativa."
+    },
+    {
+      pergunta: "Preciso usar linha de comando para mexer no Git?",
+      resposta: "Não obrigatoriamente. Embora entender os comandos de terminal seja recomendado, existem excelentes ferramentas visuais (GUIs) como o GitHub Desktop, GitKraken e a própria integração nativa do Visual Studio Code que permitem usar o Git apenas clicando em botões."
+    }
+  ]} 
+/>
