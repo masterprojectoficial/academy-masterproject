@@ -1,0 +1,69 @@
+---
+titulo: "Como Escrever User Stories (Histórias de Usuário) Que os Devs Amam"
+metaDescricao: "Aprenda a fórmula oficial para escrever User Stories no Jira. Entenda o padrão INVEST e como fatiar requisitos como um Product Owner sênior."
+categoria: "scrum"
+dataPublicacao: "2026-11-11"
+tempoLeituraMin: 11
+imagemCapa: "/images/como-escrever-user-stories.jpg"
+tags: ["User Story", "História de Usuário", "Product Owner", "Jira", "Requisitos", "Scrum"]
+tipo: "artigo"
+aulasGratuitasUrl: "https://cursos-online.masterproject.com.br/course/11"
+ctaCurso:
+  titulo: "Domine a Engenharia de Requisitos Ágeis (3 Aulas Grátis!)"
+  descricao: "Pare de escrever tarefas genéricas. Aprenda a fatiar o escopo e criar Backlogs que eliminam os bugs e encantam o mercado."
+  textoBotao: "Assistir às 3 Aulas Grátis"
+  url: "https://cursos-online.masterproject.com.br/course/2"
+---
+
+O maior problema entre a área de Negócios e a área de Tecnologia é a comunicação. Quando um Analista de Negócios escreve no Jira um cartão dizendo *"Melhorar o sistema de buscas"*, a equipe de engenharia entra em desespero. Melhorar o quê? Deixar mais rápido? Adicionar filtros? 
+
+No Scrum, nós abandonamos aqueles documentos de requisitos gigantescos de 200 páginas e adotamos as **User Stories (Histórias de Usuário)**. Elas são curtas, focadas no valor do cliente e estruturadas para gerar diálogo.
+
+## 1. A Estrutura Clássica da User Story
+
+Uma História de Usuário perfeita deve caber em um *Post-it* e ser escrita na perspectiva da pessoa que vai usar a ferramenta, nunca da perspectiva do banco de dados. Utilize a fórmula universal:
+
+> **Como um** [Perfil do Usuário]  
+> **Eu quero** [Ação ou Funcionalidade]  
+> **Para que** [Benefício ou Valor de Negócio]
+
+**Exemplo Errado:** *Como sistema, eu quero salvar os dados do cliente na tabela xyz para evitar erros de SQL.* (Isso é jargão técnico, não uma User Story).
+
+**Exemplo Certo (PO Sênior):** *Como cliente do banco, eu quero favoritar chaves PIX recorrentes para que eu não precise digitar os números toda vez que pagar o aluguel.*
+
+## 2. A Trava de Segurança: Critérios de Aceite (BDD)
+
+A fórmula acima explica o "O Quê" e o "Por Quê". Mas como os desenvolvedores sabem que terminaram o trabalho? Como a equipe de Qualidade (QA) vai testar? 
+
+Toda História de Usuário no Jira deve vir acompanhada dos **Critérios de Aceite**, preferencialmente escritos na linguagem **BDD (Behavior-Driven Development)**:
+
+* **Dado que:** O contexto inicial.
+* **Quando:** A ação executada pelo usuário.
+* **Então:** O resultado esperado.
+
+**Exemplo prático de Critério de Aceite para a história do PIX:**
+* **Dado que** o cliente está na tela de transferência e insere uma chave PIX já salva;
+* **Quando** ele clica no botão "Transferir";
+* **Então** o sistema deve pular a etapa de verificação de nome e ir direto para a tela de senha.
+
+## 3. O Filtro INVEST: Como Saber se a História Está Pronta?
+
+Antes de levar uma História de Usuário para a reunião de *Sprint Planning*, o Product Owner deve passar o cartão pelo crivo do acrônimo **INVEST**:
+
+* **I (Independent - Independente):** A história não pode depender de outras histórias paradas no Backlog para ser testada.
+* **N (Negotiable - Negociável):** Não é um contrato gravado em pedra. Pode ser ajustada na conversa com os Devs.
+* **V (Valuable - Valiosa):** Entrega valor real ao cliente, não é apenas uma refatoração de código sem impacto.
+* **E (Estimable - Estimável):** Tem informações suficientes para a equipe pontuar o esforço (Story Points).
+* **S (Small - Pequena):** É pequena o suficiente para ser concluída dentro de UMA Sprint de duas semanas. Se for muito grande, é um Épico e precisa ser fatiada.
+* **T (Testable - Testável):** Os critérios de aceite são claros e passíveis de validação binária (passou ou falhou).
+
+---
+
+<FAQ 
+  items={[
+    {
+      pergunta: "Quem escreve as Histórias de Usuário?",
+      resposta: "O Product Owner (PO) é o responsável final por garantir que as histórias estejam escritas, claras e priorizadas no Backlog. No entanto, em equipes de alta maturidade, desenvolvedores e Scrum Masters podem (e devem) ajudar a escrever e fatiar os cartões colaborativamente."
+    }
+  ]} 
+/>
