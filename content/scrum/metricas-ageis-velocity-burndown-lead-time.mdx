@@ -1,0 +1,66 @@
+---
+titulo: "Métricas Ágeis: Guia Completo de Velocity, Burndown, Lead Time e Cycle Time"
+metaDescricao: "Aprenda a medir a performance real da sua equipe sem microgerenciamento. Domine Velocity, Burndown Chart, Lead Time e Cycle Time no Jira Software."
+categoria: "scrum"
+dataPublicacao: "2026-11-27"
+tempoLeituraMin: 11
+imagemCapa: "/images/metricas-ageis-jira.jpg"
+tags: ["Métricas Ágeis", "Velocity", "Burndown Chart", "Lead Time", "Cycle Time", "Jira Software", "Scrum"]
+tipo: "artigo"
+aulasGratuitasUrl: "https://cursos-online.masterproject.com.br/course/11"
+ctaCurso:
+  titulo: "Lidere Equipes Ágeis Com Dados Reais no Jira (3 Aulas Grátis!)"
+  descricao: "Aprenda a configurar quadros Scrum e Kanban, extrair relatórios de previsibilidade e eliminar gargalos nas entregas."
+  textoBotao: "Assistir às 3 Aulas Grátis"
+  url: "https://cursos-online.masterproject.com.br/course/2"
+---
+
+Muitos gestores tentam medir a produtividade de equipes de tecnologia contando horas trabalhadas, linhas de código escritas ou número de tarefas criadas. Essas são **métricas de vaidade**: fazem a equipe parecer ocupada, mas não garantem que o cliente está recebendo valor.
+
+Para tomar decisões baseadas em previsibilidade real dentro do [Jira Software](/guias/ferramentas/como-usar-o-jira-guia-completo), Scrum Masters e Product Owners dominam dois grupos de indicadores: **Métricas de Sprint (Scrum)** e **Métricas de Fluxo (Kanban)**.
+
+## Comparativo das 4 Principais Métricas Ágeis
+
+| Métrica | Framework | O Que Mede na Prática | Para Que Serve |
+|---|---|---|---|
+| **Velocity** | Scrum | Média de *Story Points* entregues por Sprint | Prever quantas Sprints faltam para concluir um projeto |
+| **Burndown Chart** | Scrum | Trabalho restante dia a dia dentro da Sprint | Identificar atrasos cedo e ajustar a rota antes do fim |
+| **Lead Time** | Kanban | Tempo total desde o pedido do cliente até a entrega | Medir a velocidade percebida pelo cliente/negócio |
+| **Cycle Time** | Kanban | Tempo ativo em que o time realmente trabalhou no item | Encontrar gargalos internos (ex: demora em testes de QA) |
+
+## 1. Velocity (Velocidade da Equipe)
+
+O **Velocity** soma os *Story Points* (pontuação de esforço e complexidade) de todas as histórias 100% concluídas ao final de uma Sprint.
+
+* **Como usar:** Se nos últimos 3 ciclos a equipe entregou 28, 32 e 30 pontos, sua velocidade média é **30 pontos por Sprint**. Se o novo projeto do Product Owner tem 150 pontos estimados, você já sabe matematicamente que levará cerca de **5 Sprints** para entregá-lo.
+* **O Erro Fatal:** Nunca compare o Velocity do Time A com o do Time B. Cada equipe calibra seus próprios pontos de forma subjetiva.
+
+## 2. Burndown Chart (O Radar Diário da Sprint)
+
+É o gráfico mais consultado durante a [Daily Scrum](/guias/scrum/daily-scrum-erros-comuns). Ele mostra uma linha ideal de descida do trabalho até zero no último dia da Sprint, comparada com a linha real da equipe.
+
+* **Sinal de Alerta:** Se a linha real fica estagnada no topo durante os primeiros 7 dias da Sprint e só cai no último dia, significa que as tarefas estão grandes demais ou a equipe está deixando para testar tudo na última hora.
+
+## 3. Lead Time vs. Cycle Time (Métricas de Fluxo)
+
+Essas duas métricas vêm do [framework Kanban](/guias/gestao-de-projetos/scrum-vs-kanban-qual-a-diferenca) e são essenciais para eliminar filas invisíveis:
+
+* **Lead Time (Visão do Cliente):** Começa a contar no segundo em que o cartão é criado no Backlog e só para quando a funcionalidade vai para o ar. Se o Lead Time é de 20 dias, o cliente espera quase um mês por uma solução.
+* **Cycle Time (Visão da Engenharia):** Começa a contar apenas quando um profissional arrasta o cartão para *Em Progresso* e para quando vai para *Concluído*.
+
+**A Análise de Ouro:** Se o **Cycle Time** é de 2 dias, mas o **Lead Time** é de 25 dias, o problema não é a velocidade dos desenvolvedores — o gargalo está na fila de espera antes do desenvolvimento começar ou na demora para aprovação.
+
+---
+
+<FAQ 
+  items={[
+    {
+      pergunta: "Qual é a diferença entre Burndown Chart e Burnup Chart?",
+      resposta: "O Burndown mostra o trabalho que ainda falta fazer descendo até zero, mas pode esconder mudanças de escopo inseridas no meio da Sprint. Já o Burnup possui duas linhas separadas: uma mostra o trabalho concluído subindo e outra mostra o escopo total do projeto, deixando visualmente claro para a diretoria quando novas demandas atrasaram a data de entrega."
+    },
+    {
+      pergunta: "O que é Throughput (Vazão) no Kanban?",
+      resposta: "Throughput é a quantidade total de itens entregues em um período fixo (por exemplo, 12 cartões concluídos por semana). Junto com o Cycle Time, ele permite fazer previsões estatísticas de entrega sem precisar gastar horas estimando Story Points."
+    }
+  ]} 
+/>
